@@ -33,7 +33,7 @@ export default function FoodDetails() {
     console.log(likeData);
     const handleLike = ()=>{
         if(! likeData.some((likedFood)=> likedFood.id === food.id)){
-            setLike(...likeData, food)
+            setLike([...likeData, food])
         }
     }
 
