@@ -1,0 +1,43 @@
+
+  /* Liked Food Item Card */
+   .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Liked Food Image */
+   .item img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Liked Food Info */
+   .item h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* --- LikeButton --- */
+  Button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  Button:hover {
+    background-color: #ff5a4f;
+  }

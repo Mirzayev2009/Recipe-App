@@ -1,40 +1,26 @@
-.box{
-    width: 300px;
-    height: 420px;
-    border: 1px solid transparent;
-    display: flex;
-    flex-direction: column;
-    margin: 2% 0%;
-    box-shadow: 0px 2px 3.7px 0px black;
-    justify-content: space-between;
-    border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    align-items: center;
-    font-size: 10px;
-
-}
-.title{
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #4caf50;
+    color: white;
+    margin: 0;
+  }
+  
+  /* Food Image */
+  .image {
     width: 100%;
-    height: 15%;
-    margin-top: 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.image{
-    width: 100%;
-    height: 70%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-
-
-}
-.info{
-    width: 100%;
-    height: 20%;
-    border: 1px solid transparent;
-    display: flex;
-}
+    height: auto;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  /* Food Info (Ready time, servings, type) */
+  .info {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .info h2 {
+    margin: 5px 0;
+  }

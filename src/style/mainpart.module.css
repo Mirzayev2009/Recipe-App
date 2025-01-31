@@ -1,7 +1,8 @@
-.mainPart{
+.mainPart {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
     width: 100%;
-    height: 100%;
-    border: 1px solid transparent;
-    display: flex;
-    flex-wrap: wrap;
-}
+    max-width: 1200px;
+  }

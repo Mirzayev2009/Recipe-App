@@ -1,6 +1,55 @@
-.box{
-    width: 100%;
-    height: 100%;
+/* Ingredient List Layout */
+.itemList {
     display: flex;
     flex-wrap: wrap;
-}
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  /* Ingredient Item */
+  .item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .item p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* --- Common Button Styles --- */
+  
+  /* Generic Button */
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* --- General Layout and Responsiveness --- */
+  
+  /* Container for Each Page */
+  .pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }

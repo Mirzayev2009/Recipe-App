@@ -1,0 +1,45 @@
+/* Food Details Layout */
+.foodDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Food Image */
+  .foodDetails img {
+    max-width: 500px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Food Title and Info */
+  .foodDetails h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .foodDetails h2 {
+    font-size: 18px;
+    color: #666;
+    margin: 5px 0;
+  }
+  .foodDetails button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .foodDetails button:hover {
+    background-color: #45a049;
+  }
