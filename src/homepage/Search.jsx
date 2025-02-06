@@ -1,31 +1,35 @@
-import { useEffect, useState } from "react"
-import styles from "../style/search.module.css"
+import { useEffect, useState } from "react";
+import styles from "../style/search.module.css";
 
+const URL = "https://api.spoonacular.com/recipes/complexSearch";
+const API_KEY = "6de54f2f3b2a4add863649073978c5ce";
 
+export default function Search({ setFoodData }) {
+  const [query, setQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState(query);
 
-const URL = "https://api.spoonacular.com/recipes/complexSearch"
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedQuery(query);
+    }, 500); // Debounce time (500ms)
 
-const API_KEY = "6de54f2f3b2a4add863649073978c5ce"
+    return () => clearTimeout(timer);
+  }, [query]);
 
+  useEffect(() => {
+    if (!debouncedQuery) return;
 
+    async function FetchingData() {
+      const res = await fetch(`${URL}?query=${debouncedQuery}&apiKey=${API_KEY}`);
+      const data = await res.json();
+      setFoodData(data.results);
+    }
+    FetchingData();
+  }, [debouncedQuery]);
 
-export default function Search({setFoodData}){
-
-    const [query, setQuery] = useState('')
-    useEffect(()=>{
-        async function FetchingData() {
-            const res = await fetch(`${URL}?query=${query}&apiKey=${API_KEY}`)
-            const data = await res.json()
-            setFoodData(data.results)
-            
-        }
-        FetchingData()
-    }, [query])
-
-
-  return(
+  return (
     <div className={styles.inputCont}>
-        <input type="text" value={query} onChange={(e)=> setQuery(e.target.value)} />
+      <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
     </div>
-  )
+  );
 }
